@@ -36,6 +36,12 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 
 function mySimpleReduce(array, cb) {
   // Your code here
+  let accumulater = array[0];
+  for (let i = 1; i < array.length; i++) {
+    let temp = cb(accumulater, array[i]);
+    accumulater = temp;
+  }
+  return accumulater;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
