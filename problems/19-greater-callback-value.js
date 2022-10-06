@@ -20,6 +20,9 @@ console.log(greaterCallbackValue(9, Math.sqrt, doubler));   // 18
 
 function greaterCallbackValue(val, cb1, cb2) {
   // Your code here
+  let res1 = cb1(val);
+  let res2 = cb2(val);
+  return Math.max(res1, res2);
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

@@ -39,6 +39,15 @@ console.log(result6);   // true
 
 function one(array, cb) {
   // Your code here
+  let count = 0;
+  let i = 0;
+  array.forEach(item => {
+    if(cb(item, i)) {
+      count++;
+    }
+    i++;
+  })
+  return count === 1;
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/

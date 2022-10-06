@@ -33,6 +33,12 @@ console.log(
 
 let xorSelect = function(array, cb1, cb2) {
   // Your code here
+  let ans = [];
+  array.forEach(item =>{
+    if((cb1(item) && !cb2(item)) || (!cb1(item) && cb2(item)))
+    ans.push(item);
+  })
+  return ans;
 };
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS  LINE**********************/
